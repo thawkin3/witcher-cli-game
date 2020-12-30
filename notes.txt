@@ -1,0 +1,29 @@
+The Witcher
+
+Start with 100 HP.
+
+Choose your character
+- Geralt, Ciri, Yennefer
+
+Choose a weapon
+- silver sword (1-3 damage), dagger (3-5 damage), alchemy ingredients
+
+You stumble upon a night wraith. What do you do?
+- fight
+	- 1-5 damage, 5 HP, keep fighting until one of you dies; if you win, your weapon improves
+- run away
+	- safe
+- sneak
+	- random, you'll either get by safely, or you'll be caught and you have to fight
+
+You run into an elf that needs your help. What do you do?
+- not help
+	- gets mad and calls you mean names; that hurts your feelings and you lose health
+- help
+	- killing a monster; fight the monster, 10 HP, 3-6 damage; if you win, your weapon improves
+
+You run into the knights of the flaming rose. You have a bounty on your head.
+- fight
+	- 20 HP, 6-9 damage
+- try to escape
+	- random, you'll either get by safely, or you'll be caught and you have to fight

@@ -6,7 +6,7 @@ Choose your character
 - Geralt, Ciri, Yennefer
 
 Choose a weapon
-- silver sword (1-3 damage), dagger (3-5 damage), alchemy ingredients
+- silver sword (1-3 damage), dagger (3-5 damage), crossbow (2-4 damage)
 
 You stumble upon a night wraith. What do you do?
 - fight

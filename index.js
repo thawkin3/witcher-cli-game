@@ -1,6 +1,8 @@
 const prompts = require('prompts');
 
 const sneakResult = Math.random() > 0.5;
+let yourHP = 100;
+let nightWraithHP = 5;
 
 const questions = [
   {
@@ -49,9 +51,31 @@ const questions = [
     message: sneakResult ? 'You snuck by safely! Ready to continue on your journey?' : 'Oh no! It saw you! Ready to fight?',
   },
   {
-    type: (prev, values) => values.nightWraith === 'fight' || (values.nightWraith === 'sneak' && sneakResult === false) ? 'confirm' : null,
+    type: (prev, values) => values.nightWraith === 'fight' || (values.nightWraith === 'sneak' && sneakResult === false) ? 'number' : null,
     name: 'nightWraithFight',
-    message: 'Fight!',
+    message: prev => 'Fight! Enter a number to attack.',
+    validate: () => {
+      if (yourHP <= 0 || nightWraithHP <= 0) {
+        return true;
+      } else {
+        const damageToYou = Math.ceil(Math.random() * 5);
+        const damageToNightWraith = Math.ceil(Math.random() * 3);
+
+        yourHP -= damageToYou;
+        nightWraithHP -= damageToNightWraith;
+
+        if (yourHP <= 0 || nightWraithHP <= 0) {
+          return true;
+        } else {
+          return `Fight! You have ${yourHP} HP. The night wraith has ${nightWraithHP} HP. Enter a number to attack.`;
+        }
+      }
+    }
+  },
+  {
+    type: 'confirm',
+    name: 'battleOneCheckpoint',
+    message: prev => `Your current health is ${yourHP} HP.`,
   },
 ];
 
